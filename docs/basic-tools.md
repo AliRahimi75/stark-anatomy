@@ -273,7 +273,7 @@ In terms of basic arithmetic operations, it is worth including a powering map, a
         return acc
 ```
 
-A polynomial is quite pointless if it does not admit the computation of its value in a given arbitrary point. For STARKs we need someting more general -- polynomial evaluation on a *domain* of values, rather in a single point. Performance is not a concern at this point so the following implementation follows a straightforward iterative method. Conversely, STARKs also require polynomial interpolation where the x-coordinates are another known range of values. Once again, performance is not an immediate issue so for the time being standard [Lagrange interpolation](https://en.wikipedia.org/wiki/Lagrange_polynomial) suffices.
+A polynomial is quite pointless if it does not admit the computation of its value in a given arbitrary point. For STARKs we need something more general -- polynomial evaluation on a *domain* of values, rather in a single point. Performance is not a concern at this point so the following implementation follows a straightforward iterative method. Conversely, STARKs also require polynomial interpolation where the x-coordinates are another known range of values. Once again, performance is not an immediate issue so for the time being standard [Lagrange interpolation](https://en.wikipedia.org/wiki/Lagrange_polynomial) suffices.
 
 ```python
     def evaluate( self, point ):
